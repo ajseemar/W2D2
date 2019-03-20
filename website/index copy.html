@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ajay & Shawns Awesome Site</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Awesome page">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Ajay Seemar & Shawn Scott">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+      
+      <ul>
+        <li><a class="active" href="#kitty">Kitty</a></li>
+        <li><a href="#doggo">Doggo</a></li>
+        <li><a href="#turtle">Turtle</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+      <a name="kitty"></a>
+      <section>
+        <img src="https://steemitimages.com/DQmVbFAhvcrtXsXBmF8D6JoNYDY5FqYDy5PcTLVUM1mgH3X/cool-status.jpg"/>
+      </section>
+      <a name="doggo"></a>
+      <section>
+        <img src="https://www.rover.com/blog/wp-content/uploads/2015/07/pug-sunglasses.jpg" />
+      </section>
+      <a name="turtle"></a>
+      <section>
+        <img src="https://static.tbdcdn.com/uploads/2018/03/30/94960-smallv2-500047.jpg" />
+      </section>
+      
+
+    <script>
+
+      function myToggle()
+      {
+        var list = document.querySelectorAll("li")
+        for(let i = 0; i < list.length; i++){
+          list[i].querySelector("a").removeAttribute("class")
+        }
+          event.target.setAttribute("class", "active")
+        // document.querySelector("img").style.height = imgHeight.toString() + "px";
+      }
+
+
+      //console.log(window.innerWidth);
+      window.addEventListener("click", myToggle)
+      
+    </script>
+  </body>
+</html>
